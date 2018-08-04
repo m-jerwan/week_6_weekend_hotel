@@ -70,8 +70,7 @@ public class Hotel {
     public ArrayList<Bedroom> listOfVacantBedrooms(){
 //TODO: WRITE
         ArrayList<Bedroom> listOfVacantBedrooms = new ArrayList<Bedroom>();
-        ArrayList<Bedroom> bedroomList = this.allBedrooms;
-        for (Bedroom bedroom : bedroomList){
+        for (Bedroom bedroom : this.allBedrooms){
             if (bedroom.spacesLeft() == 0) {
                 listOfVacantBedrooms.add(bedroom);
             }
@@ -79,7 +78,21 @@ public class Hotel {
         return listOfVacantBedrooms;
         }
 
+    /**Gets list of <b>all</b> hotel guests.
+     *
+     * @return ArrayList
+     */
+    public ArrayList<Guest> allHotelGuests(){
+        ArrayList<Guest> allHotelGuests = new ArrayList<Guest>();
+        for (Bedroom bedroom : this.getAllBedrooms()){
+            for (Guest guest : bedroom.getGuestList()){
+                allHotelGuests.add(guest);
+            }
+        }
+        return allHotelGuests;
+    }
 
+//    TODO: access bedrooom method checkIn thru HOTEL
 
 
 

@@ -9,6 +9,7 @@ public abstract class Room {
     private int capacity;
     private int spacesLeft;
     private ArrayList<Guest> guestLIst;
+    private ArrayList<String> roomInfo;
 
 // CONSTRUCTOR:
     public Room(int capacity){
@@ -43,7 +44,6 @@ public abstract class Room {
     public ArrayList<Guest> getGuestList(){
         return guestLIst;
     }
-
 
 
 

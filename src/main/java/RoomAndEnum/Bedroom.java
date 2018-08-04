@@ -9,6 +9,7 @@ public class Bedroom extends Room {
     private int roomNumber;
     private double ratePerNight;
     private BedroomType bedroomType;
+    private int stay;
 
 
 // CONSTRUCTOR:
@@ -18,6 +19,7 @@ public class Bedroom extends Room {
         this.roomNumber  = roomNumber;
         this.ratePerNight = ratePerNight;
         this.bedroomType = bedroomType;
+        this.stay = 0;
     }
 // METHODS:
 
@@ -30,15 +32,19 @@ public class Bedroom extends Room {
     public Enum getBedroomType(){
         return this.bedroomType;
     }
+    public int getStay(){
+        return stay;
+    }
 
     /**Adding guests to guestsList ArrayList.
      *
      * @param guest
      */
-    public boolean checkIn(Guest guest){
+    public boolean checkIn(Guest guest, int stay){
         if (spacesLeft() > 0) {
             this.getGuestList().add(guest);
             this.changeSpacesLeft(1);
+            this.stay = stay;
             return true;
         }
         return false;
@@ -53,3 +59,5 @@ public class Bedroom extends Room {
     }
 
 }
+
+

@@ -54,28 +54,28 @@ public class BedroomTest {
 
     @Test
     public void checkingIn() {
-        bedroom_01.checkIn(guest_01);
+        bedroom_01.checkIn(guest_01,1);
         assertEquals(1, bedroom_01.getGuestList().size());
     }
 
     @Test
     public void checkingOut() {
-        bedroom_01.checkIn(guest_01);
+        bedroom_01.checkIn(guest_01,1);
         bedroom_01.checkOut(guest_01);
         assertEquals(0, bedroom_01.getGuestList().size());
     }
 
     @Test
     public void checkingOverCapacity() {
-        bedroom_01.checkIn(guest_01);
-        bedroom_01.checkIn(guest_02);
+        bedroom_01.checkIn(guest_01,1);
+        bedroom_01.checkIn(guest_02,1);
         assertEquals(1, bedroom_01.getGuestList().size());
     }
 
     @Test
     public void checkingOverCapacityReturnFalse() {
-        bedroom_01.checkIn(guest_01);
-        Boolean error = bedroom_01.checkIn(guest_02);
+        bedroom_01.checkIn(guest_01,1);
+        Boolean error = bedroom_01.checkIn(guest_02,1);
         assertEquals(false, error);
     }
 }
