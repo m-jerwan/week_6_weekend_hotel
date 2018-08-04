@@ -9,7 +9,7 @@ public class DinningRoomTest {
     DinningRoom dinningRoom_01;
 
     @Before
-    public void before(){
+         public void before(){
         dinningRoom_01 = new DinningRoom(100, "Monroe", 0);
     }
 
@@ -18,11 +18,11 @@ public class DinningRoomTest {
         assertEquals(100, dinningRoom_01.getCapacity());
     }
     @Test
-    public void hasName(){
+        public void hasName(){
         assertEquals("Monroe", dinningRoom_01.getName() );
     }
     @Test
-    public void hasRate(){
+        public void hasRate(){
         assertEquals(0, dinningRoom_01.getRate(),0 );
     }
 }

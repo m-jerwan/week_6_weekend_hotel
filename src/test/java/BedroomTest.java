@@ -24,7 +24,7 @@ public class BedroomTest {
         bedroom_04 = new Bedroom(41, 100.29, FAMILY);
 
         guest_01 = new Guest("Andrej", "Kozakiewicz", "Russian");
-        guest_02 = new Guest("Andrew", "Weber", "American");
+        guest_02 = new Guest("Leona", "Webber", "American");
     }
 
     @Test
@@ -78,4 +78,13 @@ public class BedroomTest {
         Boolean error = bedroom_01.checkIn(guest_02,1);
         assertEquals(false, error);
     }
+
+    @Test
+    public void getGuestListNames(){
+        bedroom_02.checkIn(guest_02, 1);
+        bedroom_02.checkIn(guest_01,2);
+
+        assertEquals("Leona Webber" , bedroom_02.getGuestListNames().get(0));
+    }
+
 }

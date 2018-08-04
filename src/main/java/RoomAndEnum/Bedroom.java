@@ -2,8 +2,6 @@ package RoomAndEnum;
 
 import Guest.Guest;
 
-import static RoomAndEnum.BedroomType.SINGLE;
-
 //===========================================================
 public class Bedroom extends Room {
     private int roomNumber;

@@ -7,5 +7,5 @@ public class ConferenceRoom extends FunctionRoom {
     }
 
 
-
+//getters and setters are inherited
 }

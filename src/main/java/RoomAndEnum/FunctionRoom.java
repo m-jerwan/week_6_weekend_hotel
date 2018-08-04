@@ -21,7 +21,7 @@ public abstract class FunctionRoom  extends Room {
 // METHODS:
 
     public boolean bookRoom() {
-        /* TODO: write this method*/
+        /* TODO: */
         return true;
     }
 

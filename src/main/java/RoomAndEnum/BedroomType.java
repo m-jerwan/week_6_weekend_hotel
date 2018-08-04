@@ -3,8 +3,8 @@ package RoomAndEnum;
 public enum BedroomType {
     SINGLE(1,"Ideal for single travelers"),
     DOUBLE(2,"Great for couples with or without a child"),
-    TWIN(2,"Good for traveling business colegues"),
-    FAMILY(4,"Family up to four will sleep comftoably");
+    TWIN(2,"Good for traveling business colleagues"),
+    FAMILY(4,"Family up to four will sleep comfortably");
 
     private final int capacity;
     private final String description;

@@ -38,6 +38,8 @@ public class HotelTest {
         hotel_01.getAllBedrooms().add(bedroom_02);
         hotel_01.getAllConferenceRooms().add(conferenceRoom_01);
     }
+
+
     @Test
     public void constructor(){
         assertEquals("Fawlty Towers", hotel_01.getName());
@@ -52,14 +54,14 @@ public class HotelTest {
     @Test
     public void listOfVacantBedrooms(){
         bedroom_01.checkIn(guest_01,1);
-        assertEquals(1, hotel_01.listOfVacantBedrooms().size()); //TODO: change so returns room no.
+        assertEquals(11, hotel_01.listOfVacantBedrooms().get(0),0);
     }
 
     @Test
     public void allHotelGuests(){
         bedroom_01.checkIn(guest_01,1);
         bedroom_02.checkIn(guest_02,1);
-        assertEquals(2, hotel_01.allHotelGuests().size());
+        assertEquals("Joanna Krupa", hotel_01.allHotelGuests().get(1));
     }
 
     @Test
