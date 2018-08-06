@@ -54,6 +54,8 @@ public class Bedroom extends Room {
      */
     public void checkOut(Guest guest){
         this.getGuestList().remove(guest);
+        this.stay = 0;
+        this.changeSpacesLeft(-1);
     }
 
 }

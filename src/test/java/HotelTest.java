@@ -70,4 +70,17 @@ public class HotelTest {
         assertEquals(2, bedroom_02.getStay());
     }
 
+    @Test
+    public void  checkIn(){
+        hotel_01.checkIn(bedroom_01, guest_01, 1);
+        assertEquals(1, bedroom_01.getStay());
+    }
+
+    @Test
+    public void checkOut(){
+        hotel_01.checkIn(bedroom_01, guest_01, 1);
+        hotel_01.checkOut(bedroom_01, guest_01);
+        assertEquals(0, bedroom_01.getStay());
+
+    }
 }

@@ -88,10 +88,19 @@ public class Hotel {
         return allHotelGuests;
     }
 
+    /** Uses bedrooms checkIn method
+     *
+     * @param bedroom
+     * @param guest
+     * @param stay
+     */
+    public void checkIn(Bedroom bedroom, Guest guest, int stay){
+        bedroom.checkIn(guest, stay);
+    }
 
-
-//    TODO: should "checkIn" be a Bedrooms or Hotels method?
-
+    public void checkOut(Bedroom bedroom, Guest guest){
+        bedroom.checkOut(guest);
+    }
 
 
 
